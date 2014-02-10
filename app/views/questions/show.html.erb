@@ -11,15 +11,9 @@
 </p>
 
 <h2>List of Contributors</h2>
-
-<tbody>
-  <%= @questions.users.each do |user| %>
-    <tr>
-      <td>@question.user.email</td>
-    </tr>
-  <% end %>
-</tbody>
-
+ <%@question.users.each do |user| %>
+  <p><%= user.email %></p>
+ <% end %>
 
 <%= link_to 'Edit', edit_question_path(@question) %> |
 <%= link_to 'Back', questions_path %>
